@@ -1,0 +1,84 @@
+print("                                 QUIZ GAME             ")
+
+
+
+
+
+questions = (" 1. Which is the smallest planet of our solar system? :",
+             " 2. What is playing time of our national anthem ? :",
+             " 3. How many seasons are there in a year? :",
+             " 4. When did our country become republic? :",
+             " 5. How many states are there in India? :")
+
+options = (("A. VENUS ","B. PLUTO ","C. SATURN ","D. MERCURY "),
+           ("A. 53 ","B. 52 ","C. 55 ","D. 60 "),
+           ("A. 5 ","B. 4 ","C. 7  ","D. 6 "),
+           ("A. 1950 ","B. 1948 ","C. 1947 ","D. 1943 "),
+           ("A. 28 ","B. 29  ","C. 38 ","D. 25 "))
+
+
+
+answers =("D","B","B","C","A")
+guesses =[]
+score = 0
+questions_num = 0
+
+for question in questions :
+
+    print("_______________")
+    print(question)
+    for option in options[questions_num]:
+        print(option)
+
+    guess = input("Enter (A, B, C, D): ").upper()
+    guesses.append(guess)
+    if guess == answers[questions_num]:
+        score += 1
+        print(" ")
+        print("!! CORRECT !!")
+    else:
+        print(" ")
+        print("!! INCORRECT !!")
+        print(" ")
+        print(f"{answers[questions_num]} is the correct answer")
+        
+    questions_num += 1
+
+
+
+print("----------------")
+print("    RESULTS     ")
+print("----------------")
+
+
+print("answers: ", end="")
+for answer in answers :
+    print(answer, end=" ")
+print()
+
+
+print("guesses: ", end="")
+for guess in guesses :
+    print(guess, end=" ")
+print()
+
+score = int(score / len(questions)* 100)
+print(f"your score is : {score}%")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    
+
